@@ -1,0 +1,98 @@
+import type { BetModeMeta } from 'state-shared';
+
+const emptyAssets = {
+	icon: '',
+	dialogImage: '',
+	dialogVolatility: '',
+	volatility: '',
+	button: '',
+};
+
+/** Bet mode UI metadata — keys match math index.json / RGS mode names. */
+export const LUCKY_BAKER_BET_MODE_META: BetModeMeta = {
+	base: {
+		mode: 'base',
+		costMultiplier: 1,
+		type: 'default',
+		parent: '',
+		children: '',
+		assets: emptyAssets,
+		text: {
+			title: 'BASE',
+			dialog: 'Standard game mode.',
+			button: 'PLAY',
+			betAmountLabel: '',
+			tickerIdle: 'PLACE YOUR BET',
+			tickerSpin: 'GOOD LUCK',
+		},
+		maxWin: 12000,
+	},
+	bonushunt: {
+		mode: 'bonushunt',
+		costMultiplier: 3,
+		type: 'activate',
+		parent: '',
+		children: '',
+		assets: emptyAssets,
+		text: {
+			title: 'BONUS HUNT',
+			dialog: 'Increased chance to trigger free spins for 3× bet.',
+			description: 'Higher scatter frequency each spin.',
+			button: 'ACTIVATE',
+			betAmountLabel: 'BONUS HUNT',
+			tickerIdle: 'BONUS HUNT IS ACTIVE',
+			tickerSpin: 'GOOD LUCK',
+		},
+		maxWin: 12000,
+	},
+	feature_spins: {
+		mode: 'feature_spins',
+		costMultiplier: 40,
+		type: 'activate',
+		parent: '',
+		children: '',
+		assets: emptyAssets,
+		text: {
+			title: 'FEATURE SPINS',
+			dialog: 'Guaranteed cascade win with extra wild spawns for 40× bet.',
+			description: 'Every spin starts with a win and boosted wild mechanics.',
+			button: 'ACTIVATE',
+			betAmountLabel: 'FEATURE SPINS',
+			tickerIdle: 'FEATURE SPINS ACTIVE',
+			tickerSpin: 'GOOD LUCK',
+		},
+		maxWin: 12000,
+	},
+	bonus_buy_100: {
+		mode: 'bonus_buy_100',
+		costMultiplier: 100,
+		type: 'buy',
+		parent: '',
+		children: '',
+		assets: emptyAssets,
+		text: {
+			title: 'BONUS BUY',
+			dialog: 'Buy free spins for 100× bet. 3–4 scatters guaranteed.',
+			button: 'BUY',
+			tickerIdle: 'PLACE YOUR BET',
+			tickerSpin: 'BONUS BUY ACTIVATED',
+		},
+		maxWin: 12000,
+	},
+	bonus_buy_200: {
+		mode: 'bonus_buy_200',
+		costMultiplier: 200,
+		type: 'buy',
+		parent: '',
+		children: '',
+		assets: emptyAssets,
+		text: {
+			title: 'SUPER BONUS BUY',
+			dialog: 'Buy premium free spins for 200× bet. 5 scatters guaranteed.',
+			button: 'BUY',
+			tickerIdle: 'PLACE YOUR BET',
+			tickerSpin: 'SUPER BONUS BUY ACTIVATED',
+		},
+		maxWin: 12000,
+	},
+};
